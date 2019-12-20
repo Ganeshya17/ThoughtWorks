@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,71 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DemoThought" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E95-9Z-yFc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyR-A3-FIG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZ0-ZI-6TX">
+                                                <rect key="frame" x="20" y="12" width="374" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="0gK-N1-n5Q"/>
+                                            <constraint firstItem="rZ0-ZI-6TX" firstAttribute="top" secondItem="pyR-A3-FIG" secondAttribute="top" constant="12" id="QYm-0L-ZKC"/>
+                                            <constraint firstAttribute="trailing" secondItem="rZ0-ZI-6TX" secondAttribute="trailing" constant="20" id="TjF-yH-pp8"/>
+                                            <constraint firstItem="rZ0-ZI-6TX" firstAttribute="leading" secondItem="pyR-A3-FIG" secondAttribute="leading" constant="20" id="fhS-p1-Cju"/>
+                                            <constraint firstAttribute="bottom" secondItem="rZ0-ZI-6TX" secondAttribute="bottom" constant="11" id="gtA-mI-Oki"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qgB-aB-3pV">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="774"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="9Vy-hN-XDO"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="sDx-BB-qtm"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="qgB-aB-3pV" secondAttribute="bottom" id="31h-yO-zqk"/>
+                                    <constraint firstItem="qgB-aB-3pV" firstAttribute="leading" secondItem="E95-9Z-yFc" secondAttribute="leading" id="4XA-zD-UFU"/>
+                                    <constraint firstItem="pyR-A3-FIG" firstAttribute="leading" secondItem="E95-9Z-yFc" secondAttribute="leading" id="8iS-gZ-kl6"/>
+                                    <constraint firstItem="pyR-A3-FIG" firstAttribute="top" secondItem="E95-9Z-yFc" secondAttribute="top" id="NVs-LA-u9e"/>
+                                    <constraint firstAttribute="trailing" secondItem="pyR-A3-FIG" secondAttribute="trailing" id="On9-97-coA"/>
+                                    <constraint firstItem="qgB-aB-3pV" firstAttribute="top" secondItem="pyR-A3-FIG" secondAttribute="bottom" id="iTk-bD-DKZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="qgB-aB-3pV" secondAttribute="trailing" id="vy8-0b-5qQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E95-9Z-yFc" secondAttribute="trailing" id="Fb8-t6-pQd"/>
+                            <constraint firstItem="E95-9Z-yFc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kby-rQ-vbs"/>
+                            <constraint firstItem="E95-9Z-yFc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PeO-qU-fM2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E95-9Z-yFc" secondAttribute="bottom" id="g4N-XV-R4L"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lbl_Header" destination="rZ0-ZI-6TX" id="H2E-yb-gnr"/>
+                        <outlet property="tbl_List" destination="qgB-aB-3pV" id="y1f-GB-6iR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
 </document>
