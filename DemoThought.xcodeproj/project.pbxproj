@@ -17,6 +17,8 @@
 		1725755023AC991D00312EEA /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725754A23AC991D00312EEA /* Activity.swift */; };
 		1725755223AC995B00312EEA /* ServiceClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725755123AC995B00312EEA /* ServiceClass.swift */; };
 		1725755723ACB2BF00312EEA /* ProductOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1725755523ACA9CC00312EEA /* ProductOffer.swift */; };
+		17A752F823ADEEA9003A9D53 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A752F723ADEEA9003A9D53 /* ProductDetailVC.swift */; };
+		17A752FA23ADEF44003A9D53 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A752F923ADEF44003A9D53 /* ProductDetailViewModel.swift */; };
 		17F5D6D623AC92AA00EB9458 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5D6D523AC92AA00EB9458 /* AppDelegate.swift */; };
 		17F5D6D823AC92AA00EB9458 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5D6D723AC92AA00EB9458 /* ViewController.swift */; };
 		17F5D6DB23AC92AA00EB9458 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17F5D6D923AC92AA00EB9458 /* Main.storyboard */; };
@@ -56,6 +58,8 @@
 		1725755123AC995B00312EEA /* ServiceClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceClass.swift; sourceTree = "<group>"; };
 		1725755323AC998300312EEA /* MobileListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListModel.swift; sourceTree = "<group>"; };
 		1725755523ACA9CC00312EEA /* ProductOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductOffer.swift; sourceTree = "<group>"; };
+		17A752F723ADEEA9003A9D53 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
+		17A752F923ADEF44003A9D53 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 		17F5D6D223AC92AA00EB9458 /* DemoThought.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoThought.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F5D6D523AC92AA00EB9458 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17F5D6D723AC92AA00EB9458 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +128,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		17A752F623ADEE88003A9D53 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				17A752F723ADEEA9003A9D53 /* ProductDetailVC.swift */,
+				17A752F923ADEF44003A9D53 /* ProductDetailViewModel.swift */,
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
 		17F5D6C923AC92AA00EB9458 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +166,7 @@
 				1725755523ACA9CC00312EEA /* ProductOffer.swift */,
 				1725755123AC995B00312EEA /* ServiceClass.swift */,
 				1725753E23AC95F500312EEA /* MobileCell.swift */,
+				17A752F623ADEE88003A9D53 /* ProductDetail */,
 				1725754223AC991D00312EEA /* Connection */,
 				1725754623AC991D00312EEA /* Extension */,
 				1725754923AC991D00312EEA /* Utils */,
@@ -319,6 +333,7 @@
 				1725755023AC991D00312EEA /* Activity.swift in Sources */,
 				1725754F23AC991D00312EEA /* String+Ext.swift in Sources */,
 				1725754D23AC991D00312EEA /* ConnectionClass.swift in Sources */,
+				17A752FA23ADEF44003A9D53 /* ProductDetailViewModel.swift in Sources */,
 				1725754E23AC991D00312EEA /* UIImage+Ext.swift in Sources */,
 				1725755223AC995B00312EEA /* ServiceClass.swift in Sources */,
 				1725754B23AC991D00312EEA /* Constants.swift in Sources */,
@@ -327,6 +342,7 @@
 				1725755723ACB2BF00312EEA /* ProductOffer.swift in Sources */,
 				17F5D6DE23AC92AA00EB9458 /* DemoThought.xcdatamodeld in Sources */,
 				1725754023AC95F500312EEA /* MobileCell.swift in Sources */,
+				17A752F823ADEEA9003A9D53 /* ProductDetailVC.swift in Sources */,
 				1725754C23AC991D00312EEA /* APITarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

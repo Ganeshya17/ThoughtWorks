@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct Products: Codable {
+struct Product: Codable {
     let pid, name, price: String
     let offerPrice, desc: String?
     let image: String
 }
 
-typealias ListOfProduct = [Products]
+typealias ListOfProduct = [Product]
 
 

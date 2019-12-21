@@ -13,7 +13,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var lbl_Header: UILabel!
     @IBOutlet weak var tbl_List: UITableView!
     
-    var ProductList:[Products]?
+    @IBOutlet weak var viewWishlist: UIView!
+    @IBOutlet weak var lblTotalAmount: UILabel!
+    @IBOutlet weak var lblSaving: UILabel!
+    @IBOutlet weak var lblTotalItems: UILabel!
+    @IBOutlet weak var btnProducts: UIButton!
+    @IBOutlet weak var btnWishlist: UIButton!
+    
+    var index_arr:[Int]?
+    var ProductList:[Product]?
     var WishlistCount:Int = 0
     var wishListarr = [Int]()
     var dic = [String:Int]()
@@ -24,7 +32,13 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func wishListValues(_ sender: Any) {
+        
+        
+    }
     
+    @IBAction func productList(_ sender: Any) {
+    }
     func setUI(){
         
         tbl_List.register(UINib(nibName: "MobileCell", bundle: nil), forCellReuseIdentifier: "mobilecell")
@@ -44,6 +58,16 @@ class ViewController: UIViewController {
                }
            }
        }
+    
+    func detailViewModel(index:Int) -> ProductDetailViewModel?{
+        
+        guard let products = ProductList  else {
+            return nil
+        }
+        let product = products[index]
+        
+        return product
+    }
 
 }
 
@@ -71,18 +95,21 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource
         }
        
         if dic.keys.contains(ProductList?[indexPath.row].pid ?? ""){
-            cell.lblWishListCount.text = dic[]
+            cell.lblWishListCount.text = dic[ProductList?[indexPath.row].pid ?? ""] as? String
         }
                 
 //        if (ProductList?[indexPath.row].pid == dic.keys.){
-//
-//            cell.lblWishListCount.text = "\(String(describing: dic[ProductList?[indexPath.row].pid ?? ""]) )"
+//           cell.lblWishListCount.text = "\(String(describing: dic[ProductList?[indexPath.row].pid ?? ""]) )"
 //        }else{
-//
 //        }
         cell.lblWishListCount.text = "\(WishlistCount)"
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -90,6 +117,13 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource
     }
     
     @objc func Product_add(sender:UIButton){
+        
+        if index_arr?.contains(sender.tag) ?? true{
+            
+        }else{
+            WishlistCount = 0
+            index_arr?.append(sender.tag)
+        }
         
         WishlistCount = WishlistCount + 1
         

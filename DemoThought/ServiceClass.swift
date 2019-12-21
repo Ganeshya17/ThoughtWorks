@@ -10,7 +10,7 @@ import Foundation
 
 class ServiceClass {
     
-    typealias ProductListHandler = ((_ error: String?, _ list: [Products]) -> Void)
+    typealias ProductListHandler = ((_ error: String?, _ list: [Product]) -> Void)
     
     struct ProductListRequest: APITarget {
         var params: Dictionary<String, Any>?
